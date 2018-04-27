@@ -18,7 +18,7 @@ const pageDropdownOptions = [{
 }];
 
 const SearchResults = ({ items }) => (
-    <div className='container mx-auto p-4 flex flex-col items-start bg-white h-full' style={{ minWidth: '800px' }}>
+    <div className='container mx-auto p-4 flex flex-col items-start bg-white' style={{ minWidth: '800px' }}>
         <div className='border-solid border-yellow-dark border-b-4 pb-2 mb-4 text-sm text-grey-darker uppercase'>
             {items.length > 0
                 ? (items.length > 1 ? `${items.length} itens encontrados` : '1 item encontrado')
