@@ -17,11 +17,11 @@ const pageDropdownOptions = [{
     value: 25,
 }];
 
-const SearchResults = ({ items }) => (
+const SearchResults = ({ items, totalCount, pageNumber, itemsPerPage, onPageChange }) => (
     <div className='container mx-auto p-4 flex flex-col items-start bg-white' style={{ minWidth: '800px' }}>
         <div className='border-solid border-yellow-dark border-b-4 pb-2 mb-4 text-sm text-grey-darker uppercase'>
             {items.length > 0
-                ? (items.length > 1 ? `${items.length} itens encontrados` : '1 item encontrado')
+                ? (items.length > 1 ? `${totalCount} itens encontrados` : '1 item encontrado')
                 : 'Nenhum item encontrado'
             }
         </div>
@@ -34,7 +34,11 @@ const SearchResults = ({ items }) => (
 
         <div className='flex flex-row w-full justify-between items-center pt-2'>
             <Dropdown options={pageDropdownOptions} />
-            <Pagination />
+            <Pagination
+                currentPage={pageNumber}
+                lastPage={Math.round((totalCount - 1) / itemsPerPage)}
+                onPageChange={onPageChange}
+            />
         </div>
     </div>
 );
