@@ -3,13 +3,13 @@ import SearchBar from './SearchBar';
 import logo from '../logo.png';
 
 const Navbar = ({ onSearch }) => (
-    <nav className="flex items-center justify-between flex-wrap bg-white p-6">
+    <nav className="flex flex-row items-center justify-between flex-wrap bg-white px-6 py-3">
         <div className="flex items-center flex-no-shrink text-white mr-6">
             <img style={{ width: '120px' }} src={logo} alt="mmartan" />
         </div>
 
-        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-            <div className="text-sm lg:flex-grow">
+        <div className="block flex-grow flex justify-end w-auto">
+            <div className="text-sm w-64 float-right">
                 <SearchBar onSubmit={onSearch} />
             </div>
         </div>
