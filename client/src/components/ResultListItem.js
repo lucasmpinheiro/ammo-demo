@@ -3,7 +3,7 @@ import React from 'react';
 const formatPrice = value => `R$${value.toFixed(2).replace('.', ',')}`;
 
 const ResultListItem = ({ name, tags, photos, price, discountedPrice }) => (
-    <div className='flex flex-row items-center w-full border-solid border-grey border p-1'>
+    <div className='flex flex-row items-center w-full border-solid border-grey-light border p-1'>
         <div className='w-1/3 flex flex-row justify-between w-64'>
             {photos.map((url, i) => (
                 <img key={i} alt='' className='w-16 h-16 mx-1' src={url} />
