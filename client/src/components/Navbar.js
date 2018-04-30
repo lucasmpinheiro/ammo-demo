@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 import logo from '../logo.png';
 
 const Navbar = ({ onSearch }) => (
-    <nav className="flex flex-row items-center justify-between flex-wrap bg-white px-6 py-3">
+    <nav className="w-full flex flex-row items-center justify-between flex-wrap bg-white px-6 py-3">
         <div className="flex items-center flex-no-shrink text-white mr-6">
             <img style={{ width: '120px' }} src={logo} alt="mmartan" />
         </div>

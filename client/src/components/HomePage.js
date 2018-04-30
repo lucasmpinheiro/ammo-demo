@@ -4,7 +4,7 @@ import SearchTerms from './SearchTerms';
 import SearchResultsContainer from '../containers/SearchResultsContainer';
 
 const HomePage = ({ filter, pageNumber, itemsPerPage, onSearch, onPageChange }) => (
-    <div className="flex flex-col items-stretch font-sans">
+    <div className="flex flex-col items-center font-sans">
         <Navbar onSearch={onSearch} />
         <SearchTerms filter={filter} />
         <SearchResultsContainer
