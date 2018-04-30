@@ -18,7 +18,7 @@ const pageDropdownOptions = [{
 }];
 
 const SearchResults = ({ items, totalCount, pageNumber, itemsPerPage, onPageChange }) => (
-    <div className='container mx-auto p-4 flex flex-col items-start bg-white' style={{ minWidth: '800px' }}>
+    <div className='sm:self-center max-w-xl p-4 flex flex-col justify-center items-start bg-white' style={{ minWidth: '340px' }}>
         <div className='border-solid border-yellow-dark border-b-4 pb-2 mb-4 text-sm text-grey-darker uppercase'>
             {items.length > 0
                 ? (items.length > 1 ? `${totalCount} itens encontrados` : '1 item encontrado')
@@ -33,7 +33,7 @@ const SearchResults = ({ items, totalCount, pageNumber, itemsPerPage, onPageChan
         <hr className='text-grey-lighter bg-grey-lighter w-full h-px my-4' />
 
         {items && items.length > 0 && (
-            <div className='flex flex-row w-full justify-between items-center pt-2'>
+            <div className='flex flex-col sm:flex-row w-full justify-between items-center pt-2'>
                 <Dropdown
                     options={pageDropdownOptions}
                     value={itemsPerPage}
