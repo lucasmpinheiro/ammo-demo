@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Dropdown = ({ options }) => (
+const Dropdown = ({ options, value, onChange }) => (
     <div className='relative h-8'>
-        <select className='block appearance-none bg-transparent border border-grey-light text-sm text-grey-darker p-2 pr-8 rounded'>
+        <select
+            className='block appearance-none bg-transparent border border-grey-light text-sm text-grey-darker p-2 pr-8 rounded'
+            value={value}
+            onChange={onChange}
+        >
             {options.map(props => <option key={props.value} {...props} />)}
         </select>
         <div className="pointer-events-none absolute pin-y pin-r flex items-center px-2 pt-1 text-grey-darker">

@@ -14,7 +14,7 @@ export default class HomePageContainer extends React.Component {
     })
 
     handlePageChange = ({ pageNumber, itemsPerPage }) => this.setState({
-        pageNumber: pageNumber === 0 ? 0 : pageNumber || this.state.pageNumber,
+        pageNumber: pageNumber === 0 || itemsPerPage ? 0 : pageNumber || this.state.pageNumber,
         itemsPerPage: itemsPerPage || this.state.itemsPerPage,
     })
 

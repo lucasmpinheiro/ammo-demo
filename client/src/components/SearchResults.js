@@ -33,7 +33,11 @@ const SearchResults = ({ items, totalCount, pageNumber, itemsPerPage, onPageChan
         <hr className='text-grey-lighter bg-grey-lighter w-full h-px my-4' />
 
         <div className='flex flex-row w-full justify-between items-center pt-2'>
-            <Dropdown options={pageDropdownOptions} />
+            <Dropdown
+                options={pageDropdownOptions}
+                value={itemsPerPage}
+                onChange={e => onPageChange({ itemsPerPage: e.target.value })}
+            />
             <Pagination
                 currentPage={pageNumber}
                 lastPage={Math.round((totalCount - 1) / itemsPerPage)}
