@@ -3,8 +3,8 @@ import PaginationItem from './PaginationItem';
 
 const Pagination = ({ currentPage, lastPage, onPageChange }) => {
     const firstPageNumber = currentPage < 3 ? 0 : currentPage - 2;
-    const lastPageNumber = currentPage + 3 > lastPage ? lastPage : currentPage + 3;
-    const pageNumbers = Array.from({ length: lastPageNumber - firstPageNumber }, (v, k) => k + firstPageNumber + 1);
+    const lastPageNumber = currentPage + 2 > lastPage ? lastPage : currentPage + 2;
+    const pageNumbers = Array.from({ length: lastPageNumber - firstPageNumber + 1 }, (v, k) => k + firstPageNumber + 1);
 
     return (
         <ul className='flex list-reset w-auto text-sm text-grey-darker p-2'>
@@ -30,13 +30,13 @@ const Pagination = ({ currentPage, lastPage, onPageChange }) => {
 
             <PaginationItem
                 value='>'
-                disabled={currentPage === lastPage - 1}
+                disabled={currentPage === lastPage}
                 onClick={() => onPageChange({ pageNumber: currentPage + 1 })}
             />
             <PaginationItem
                 value='> |'
-                disabled={currentPage === lastPage - 1}
-                onClick={() => onPageChange({ pageNumber: lastPage - 1 })}
+                disabled={currentPage === lastPage}
+                onClick={() => onPageChange({ pageNumber: lastPage })}
             />
         </ul>
     );
