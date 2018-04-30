@@ -41,7 +41,7 @@ const SearchResults = ({ items, totalCount, pageNumber, itemsPerPage, onPageChan
                 />
                 <Pagination
                     currentPage={pageNumber}
-                    lastPage={Math.round((totalCount - 1) / itemsPerPage)}
+                    lastPage={Math.floor((totalCount - 1) / itemsPerPage)}
                     onPageChange={onPageChange}
                 />
             </div>
