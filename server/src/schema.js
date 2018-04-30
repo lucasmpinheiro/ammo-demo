@@ -11,8 +11,13 @@ const typeDefs = `
         photos: [String]
     }
 
+    type ProductList {
+        totalCount: Int
+        edges: [Product!]
+    }
+
     type Query {
-        products(filter: String!): [Product]
+        products(filter: String, skip: Int, limit: Int): ProductList
     }
 `;
 
