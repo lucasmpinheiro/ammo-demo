@@ -33,7 +33,7 @@ const SearchResults = ({ items, totalCount, pageNumber, itemsPerPage, onPageChan
         <hr className='text-grey-lighter bg-grey-lighter w-full h-px my-4' />
 
         {items && items.length > 0 && (
-            <div className='flex flex-row w-full justify-between items-center pt-2'>
+            <div className='flex flex-col sm:flex-row w-full justify-between items-center pt-2'>
                 <Dropdown
                     options={pageDropdownOptions}
                     value={itemsPerPage}
