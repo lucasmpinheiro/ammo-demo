@@ -1,2 +1,2 @@
-release: cd ./server && npm install && npm build
+release: cd ./server && npm install && npm run build
 web: cd ./server && node build/server.js
